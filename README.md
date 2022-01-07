@@ -1,4 +1,4 @@
-# Project# Notes-App-Kotlin
+# Notes-App-Kotlin
 | Icon Screen  | SplashScreen | 
 | ------------- | ------------- | 
 |  <img src = "https://github.com/Tanishq6210/Project/blob/main/Icon.jpg" height="800" width="400">  | <img src = "https://github.com/Tanishq6210/Project/blob/main/Splash.jpg" height="800" width="400"> |
