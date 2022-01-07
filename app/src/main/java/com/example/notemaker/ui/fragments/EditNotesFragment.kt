@@ -1,5 +1,6 @@
 package com.example.notemaker.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.format.DateFormat
 import android.view.*
@@ -33,6 +34,7 @@ class EditNotesFragment : Fragment() {
 
         //For Setting Option Menu
         setHasOptionsMenu(true)
+
 
         binding.etTitle.setText(oldNotes.data.title)
         binding.etSubTitle.setText(oldNotes.data.subTitle)
@@ -111,9 +113,11 @@ class EditNotesFragment : Fragment() {
             val tvNo = bottomSheet.findViewById<TextView>(R.id.dialog_no)
 
             bottomSheet.show()
+
             tvYes?.setOnClickListener {
                 viewModel.deleteNotes(oldNotes.data.id!!)
                 bottomSheet.dismiss()
+                Navigation.findNavController(binding.root).navigate(R.id.action_editNotesFragment_to_homeFragment)
             }
 
             tvNo?.setOnClickListener {
